@@ -14,7 +14,7 @@ export default {
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
   loading: { color: '#3B8070' },
-  css: ['~/assets/css/main.css'],
+  css: [],
   build: {},
   modules: ['@nuxtjs/axios', '@nuxtjs/bulma'],
   axios: {}
