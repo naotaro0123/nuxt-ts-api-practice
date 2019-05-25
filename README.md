@@ -4,7 +4,7 @@
 
 
 ## 参考記事
-[Nuxt.js で簡単な画像一覧アプリを作成する](https://luftgarden.work/tut-nuxt-dog-part1/) 
+[Nuxt.js で簡単な画像一覧アプリを作成する](https://luftgarden.work/tut-nuxt-dog-part1/)  
 こちらの記事を参考にTypescript化
 
 ## Build Setup

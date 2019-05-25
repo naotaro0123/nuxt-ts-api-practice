@@ -9,9 +9,7 @@ section.container
   nav.pagination(role="navigation", aria-label="pagination")
     ul.pagination-list
       li(v-for="count in page_count", :key="count")
-      //- {{current}}
-        //- nuxt-link.pagination-link(:class="{'is-current': this.current === count }",
-        //-   :to="{path: '?page=' + count } append") {{ count }}
+        nuxt-link.pagination-link(:class="{'is-current': current === count }", :to="{path: '?page=' + count }" append) {{ count }}
 </template>
 
 <script lang="ts">
@@ -24,7 +22,7 @@ import { mapState } from 'vuex';
   watchQuery: ['page']
 })
 export default class extends Vue {
-  public current: number = 1;
+  public current!: number;
 
   validate({ params }: any) {
     return /^[a-z]+$/.test(params.breed);

@@ -3,6 +3,8 @@ import { RootState } from '~/types';
 // eslint-disable-next-line no-unused-vars
 import { MutationTree } from 'vuex';
 
+export const strict = false;
+
 export const state = (): RootState => ({
   breed_list: {},
   dog_list: [],
