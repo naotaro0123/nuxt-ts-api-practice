@@ -9,26 +9,14 @@ section.container
 import { Component, Vue } from 'nuxt-property-decorator';
 import dogApi from '~/api/DogApi';
 import { mapState } from 'vuex';
-// import { Breed } from '~/types';
-// eslint-disable-next-line no-unused-vars
-// import { State } from 'vuex-class';
-// eslint-disable-next-line no-unused-vars
-// import { Person } from '~/types';
-// import Card from '~/components/Card.vue';
 
 @Component({
-  computed: mapState(['breed_list']),
-  components: {
-    // Card
-  }
+  computed: mapState(['breed_list'])
 })
 export default class extends Vue {
-  // @State people!: Person;
   async fetch({ store }: any) {
     const json = await dogApi.breeds();
     store.commit('breed_list_update', json);
   }
 }
 </script>
-
-<style scoped></style>
