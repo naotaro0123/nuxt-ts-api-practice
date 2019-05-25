@@ -19,6 +19,7 @@
   },
   "devDependencies": {
     "@nuxt/typescript": "2.7.1",
+    "@nuxtjs/bulma": "^1.2.3",
     "@nuxtjs/eslint-config": "0.0.1",
     "@types/node": "10.14.7",
     "@types/webpack-env": "1.13.9",

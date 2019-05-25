@@ -1,28 +1,27 @@
 // eslint-disable-next-line no-unused-vars
-import { RootState, Person } from '~/types';
+import { RootState, Breed } from '~/types';
 // eslint-disable-next-line no-unused-vars
 import { MutationTree, ActionTree } from 'vuex';
-import localRandomData from '~/static/random-data.json';
 
 export const state = (): RootState => ({
-  people: []
+  breed_list: {}
 });
 
 export const mutations: MutationTree<RootState> = {
-  setPeople(state: RootState, people: Person[]): void {
-    state.people = people;
+  breed_list_update(state: RootState, payload: any): void {
+    state.breed_list = { ...payload };
   }
 };
 
-export const actions: ActionTree<RootState, RootState> = {
-  async nuxtServerInit({ commit }, context) {
-    let people: Person[] = [];
+// export const actions: ActionTree<RootState, RootState> = {
+//   async nuxtServerInit({ commit }, context) {
+//     let people: Person[] = [];
 
-    // If you serve the site statically with `nuxt generate`, you can't use HTTP requests for local
-    people = context.isStatic
-      ? localRandomData
-      : await context.app.$axios.$get('./random-data.json');
+//     // If you serve the site statically with `nuxt generate`, you can't use HTTP requests for local
+//     people = context.isStatic
+//       ? localRandomData
+//       : await context.app.$axios.$get('./random-data.json');
 
-    commit('setPeople', people.slice(0, 10));
-  }
-};
+//     commit('setPeople', people.slice(0, 10));
+//   }
+// };

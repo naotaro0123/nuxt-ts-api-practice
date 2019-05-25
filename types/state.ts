@@ -1,6 +1,11 @@
+/* eslint-disable camelcase */
 /* eslint-disable no-unused-vars */
-import { Person } from '~/types';
+import { Breed } from '~/types';
+
+// export interface RootState {
+//   people: Person[];
+// }
 
 export interface RootState {
-  people: Person[];
+  breed_list: Breed;
 }
